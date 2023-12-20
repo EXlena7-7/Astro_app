@@ -1,0 +1,29 @@
+---
+
+//Fetch (Javascript API)
+const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+
+//Fucion asincrona 
+const posts = await response.json()
+
+---
+
+<h1>Mis publicaciones</h1>
+{
+    posts.map(post =>(
+    <div>
+        
+        <h5>{post.userId}</h5>
+        <h3 class="title">{post.title}</h3>
+        <p style="color:#65B741;">{post.body}</p>
+        </div>
+
+    ))
+    
+}
+
+<style>
+    .title{
+        color:  #E26EE5;
+    }
+</style>

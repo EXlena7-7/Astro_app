@@ -1,0 +1,20 @@
+---
+import Layout from "../components/Layout.astro"
+import posts from "./posts.astro";
+
+---
+<Layout pageTitle="Blog de Desarrollo" pageDescription="Tutoriales de desarrollo y programacion">
+
+	<h1>Blog</h1>
+	{
+		posts.map(post =>{
+			return <a href="/blog/mi-primer-post">{post.frontmatter.title}</a>
+				
+		})
+	}
+	<a  href={postMessage.url}>Mi Primer post</a>
+	
+</Layout>
+
+	
+
